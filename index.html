@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>장병규의 조합 이야기</title>
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f8f9fb;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 480px;
+      margin: auto;
+      padding: 16px;
+    }
+    h2, h3 {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    iframe {
+      width: 100%;
+      height: 240px;
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    .section {
+      margin-top: 24px;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .btn {
+      background-color: #004aad;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background-color: #00337a;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- 첫 인삿말 영상 -->
+  <h2>장병규 인사드립니다 🎥</h2>
+  <iframe id="videoFrame" src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+
+  <!-- 공통공약 -->
+  <div class="section">
+    <h3>공통공약</h3>
+    <div class="buttons">
+      <button class="btn" onclick="changeVideo('M7lc1UVf-VE')">교섭의원회 신설</button>
+    </div>
+  </div>
+
+  <!-- 승무원 공약 -->
+  <div class="section">
+    <h3>승무원 공약</h3>
+    <div class="buttons">
+      <button class="btn" onclick="changeVideo('E7wJTI-1dvQ')">시간·거리병산제 도입 (연착수당)</button>
+      <button class="btn" onclick="changeVideo('3fumBcKC6RE')">만근·휴가보상 강화</button>
+      <button class="btn" onclick="changeVideo('aqz-KE-bpKQ')">휴무 보장제 확대</button>
+      <button class="btn" onclick="changeVideo('2Vv-BfVoq4g')">심야·대기·절수당 개선</button>
+      <button class="btn" onclick="changeVideo('kXYiU_JCYtU')">예비 승무원 반고정제도 운영</button>
+      <button class="btn" onclick="changeVideo('YQHsXMglC9A')">교대 휴무 근무 보장 및 수당 지금</button>
+      <button class="btn" onclick="changeVideo('RgKAFK5djSk')">차량 고대 수당 및 근무권 보장 강화</button>
+    </div>
+  </div>
+
+  <!-- 정비직 공약 -->
+  <div class="section">
+    <h3>정비직 공약</h3>
+    <div class="buttons">
+      <button class="btn" onclick="changeVideo('JGwWNGJdvx8')">지방사업소 정비부 소속 일원화 및 근무 효율 강화</button>
+      <button class="btn" onclick="changeVideo('fRh_vgS2dFE')">근무시간 외 수당 및 출장 보상</button>
+      <button class="btn" onclick="changeVideo('09R8_2nJtjg')">기술력 향상에 따른 보상 체계</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function changeVideo(videoId) {
+  const frame = document.getElementById('videoFrame');
+  frame.src = `https://www.youtube.com/embed/${videoId}`;
+  frame.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>
